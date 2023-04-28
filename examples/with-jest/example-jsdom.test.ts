@@ -21,10 +21,9 @@ it('receives a mocked response to a GraphQL API request', async () => {
     },
     body: JSON.stringify({
       query: `
-        query GetUser {
-          user {
-            firstName
-            lastName
+        query ListMovies {
+          movies {
+            title
           }
         }
       `,
@@ -35,10 +34,17 @@ it('receives a mocked response to a GraphQL API request', async () => {
   expect(response.statusText).toBe('OK')
   expect(await response.json()).toEqual({
     data: {
-      user: {
-        firstName: 'John',
-        lastName: 'Maverick',
-      },
+      movies: [
+        {
+          title: 'The Lord of The Rings',
+        },
+        {
+          title: 'The Matrix',
+        },
+        {
+          title: 'Star Wars: The Empire Strikes Back',
+        },
+      ],
     },
   })
 })
