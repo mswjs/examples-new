@@ -6,9 +6,8 @@ A collection of usage examples of [Mock Service Worker](https://github.com/mswjs
 
 - Angular
 - Next.js
-- React
 - React Native
-- Remix
+- [Remix](./examples/with-remix)
 - SolidJS
 - Svelte
 - Vue
