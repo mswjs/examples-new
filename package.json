@@ -9,8 +9,5 @@
   "devDependencies": {
     "turbo": "^1.9.3",
     "typescript": "^5.0.4"
-  },
-  "dependencies": {
-    "msw": "0.0.0-fetch.rc-11"
   }
 }

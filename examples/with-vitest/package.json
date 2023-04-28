@@ -5,6 +5,8 @@
     "test": "vitest run"
   },
   "devDependencies": {
+    "msw": "0.0.0-fetch.rc-11",
+    "typescript": "^5.0.4",
     "vitest": "^0.30.1"
   }
 }
