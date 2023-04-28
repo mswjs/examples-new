@@ -18,7 +18,7 @@ export const loader: LoaderFunction = async () => {
 export default function Index() {
   const { serverSideData } = useLoaderData()
   const [favoriteMovies, setFavoriteMovies] = useState<{
-    data: Array<{ id: string; title: string }>
+    data: { movies: Array<{ id: string; title: string }> }
   } | null>(null)
 
   const handleClick = () => {
@@ -44,10 +44,10 @@ export default function Index() {
   return (
     <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
       <p>Hello, {serverSideData.firstName}!</p>
-      {favoriteMovies ? (
+      {favoriteMovies?.data ? (
         <div>
-          <h2>My favorite movies ({favoriteMovies.data.length})</h2>
-          {favoriteMovies.data.map((movie) => (
+          <h2>My favorite movies ({favoriteMovies.data.movies.length})</h2>
+          {favoriteMovies.data.movies.map((movie) => (
             <li key={movie.id}>{movie.title}</li>
           ))}
         </div>
