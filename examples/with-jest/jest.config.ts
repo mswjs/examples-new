@@ -3,6 +3,7 @@ import type { Config } from 'jest'
 export default {
   rootDir: __dirname,
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  setupFiles: ['<rootDir>/jest.polyfills.ts'],
   transform: {
     '^.+\\.tsx?$': '@swc/jest',
   },
