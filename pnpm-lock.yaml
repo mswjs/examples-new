@@ -17,7 +17,7 @@ importers:
       '@types/jest': ^29.5.1
       jest: ^29.5.0
       jest-environment-jsdom: ^29.5.0
-      msw: 0.0.0-fetch.rc-11
+      msw: 0.0.0-fetch.rc-12
       ts-node: ^10.9.1
       typescript: ^5.0.4
       undici: ^5.22.0
@@ -28,7 +28,7 @@ importers:
       '@types/jest': 29.5.1
       jest: 29.5.0_ts-node@10.9.1
       jest-environment-jsdom: 29.5.0
-      msw: 0.0.0-fetch.rc-11_typescript@5.0.4
+      msw: 0.0.0-fetch.rc-12_typescript@5.0.4
       ts-node: 10.9.1_cjhyidpz4zzsg5vhys3qksitbm
       typescript: 5.0.4
       undici: 5.22.0
@@ -38,13 +38,13 @@ importers:
     specifiers:
       '@playwright/test': ^1.33.0
       '@web/dev-server': ^0.2.1
-      msw: 0.0.0-fetch.rc-11
+      msw: 0.0.0-fetch.rc-12
       playwright: ^1.33.0
       typescript: ^5.0.4
     devDependencies:
       '@playwright/test': 1.33.0
       '@web/dev-server': 0.2.1
-      msw: 0.0.0-fetch.rc-11_typescript@5.0.4
+      msw: 0.0.0-fetch.rc-12_typescript@5.0.4
       playwright: 1.33.0
       typescript: 5.0.4
 
@@ -59,7 +59,7 @@ importers:
       '@types/react-dom': ^18.0.11
       eslint: ^8.38.0
       isbot: ^3.6.8
-      msw: 0.0.0-fetch.rc-11
+      msw: 0.0.0-fetch.rc-12
       react: ^18.2.0
       react-dom: ^18.2.0
       typescript: ^4.9.5
@@ -76,16 +76,16 @@ importers:
       '@types/react': 18.2.0
       '@types/react-dom': 18.2.1
       eslint: 8.39.0
-      msw: 0.0.0-fetch.rc-11_typescript@4.9.5
+      msw: 0.0.0-fetch.rc-12_typescript@4.9.5
       typescript: 4.9.5
 
   examples/with-vitest:
     specifiers:
-      msw: 0.0.0-fetch.rc-11
+      msw: 0.0.0-fetch.rc-12
       typescript: ^5.0.4
       vitest: ^0.30.1
     devDependencies:
-      msw: 0.0.0-fetch.rc-11_typescript@5.0.4
+      msw: 0.0.0-fetch.rc-12_typescript@5.0.4
       typescript: 5.0.4
       vitest: 0.30.1
 
@@ -1400,6 +1400,24 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
+  /@bundled-es-modules/cookie/2.0.0:
+    resolution: {integrity: sha512-Or6YHg/kamKHpxULAdSqhGqnWFneIXu1NKvvfBBzKGwpVsYuFIQ5aBPHDnnoR3ghW1nvSkALd+EF9iMtY7Vjxw==}
+    dependencies:
+      cookie: 0.5.0
+    dev: true
+
+  /@bundled-es-modules/js-levenshtein/2.0.1:
+    resolution: {integrity: sha512-DERMS3yfbAljKsQc0U2wcqGKUWpdFjwqWuoMugEJlqBnKO180/n+4SR/J8MRDt1AN48X1ovgoD9KrdVXcaa3Rg==}
+    dependencies:
+      js-levenshtein: 1.1.6
+    dev: true
+
+  /@bundled-es-modules/statuses/1.0.1:
+    resolution: {integrity: sha512-yn7BklA5acgcBr+7w064fGV+SGIFySjCKpqjcWgBAIfrAkY+4GQTJJHQMeT3V/sgz23VTEVV8TtOmkvJAhFVfg==}
+    dependencies:
+      statuses: 2.0.1
+    dev: true
+
   /@cspotcode/source-map-support/0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
     engines: {node: '>=12'}
@@ -2364,12 +2382,9 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@mswjs/cookies/0.2.2:
-    resolution: {integrity: sha512-mlN83YSrcFgk7Dm1Mys40DLssI1KdJji2CMKN8eOlBqsTADYzj2+jWzsANsUTFbxDMWPD5e9bfA1RGqBpS3O1g==}
+  /@mswjs/cookies/1.0.0:
+    resolution: {integrity: sha512-TdXoBdI+h/EDTsVLCX/34s4+9U0sWi92qFnIGUEikpMCSKLhBeujovyYVSoORNbYgsBH5ga7/tfxyWcEZAxiYA==}
     engines: {node: '>=14'}
-    dependencies:
-      '@types/set-cookie-parser': 2.4.2
-      set-cookie-parser: 2.6.0
     dev: true
 
   /@mswjs/interceptors/0.22.12:
@@ -3251,12 +3266,6 @@ packages:
     resolution: {integrity: sha512-NUo5XNiAdULrJENtJXZZ3fHtfMolzZwczzBbnAeBbqBwG+LaG6YaJtuwzwGSQZ2wsCrxjEhNNjAkKigy3n8teQ==}
     dependencies:
       '@types/mime': 3.0.1
-      '@types/node': 18.16.2
-    dev: true
-
-  /@types/set-cookie-parser/2.4.2:
-    resolution: {integrity: sha512-fBZgytwhYAUkj/jC/FAV4RQ5EerRup1YQsXQCh8rZfiHkc4UahC192oH0smGwsXol3cL3A5oETuAHeQHmhXM4w==}
-    dependencies:
       '@types/node': 18.16.2
     dev: true
 
@@ -4216,14 +4225,6 @@ packages:
       ansi-styles: 3.2.1
       escape-string-regexp: 1.0.5
       supports-color: 5.5.0
-    dev: true
-
-  /chalk/4.1.1:
-    resolution: {integrity: sha512-diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==}
-    engines: {node: '>=10'}
-    dependencies:
-      ansi-styles: 4.3.0
-      supports-color: 7.2.0
     dev: true
 
   /chalk/4.1.2:
@@ -8193,8 +8194,8 @@ packages:
   /ms/2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  /msw/0.0.0-fetch.rc-11_typescript@4.9.5:
-    resolution: {integrity: sha512-G9p0bpFFNX+/6g0YLZTCcmQ5X5IyEgEo7lkP/S33wjjrlzbCuf0vAJxr62jzJPfwYrepg/lTvWMfkPqPHcM1Ig==}
+  /msw/0.0.0-fetch.rc-12_typescript@4.9.5:
+    resolution: {integrity: sha512-NzXJ8gNkG+o2PWoui2wNLO8409sb6pMZmTF7yPNwEzhiiX5Di1mjekBRDNKbuwUUaZYFLfhKcqVJn4qrPgnM4Q==}
     engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true
@@ -8204,15 +8205,16 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@mswjs/cookies': 0.2.2
+      '@bundled-es-modules/cookie': 2.0.0
+      '@bundled-es-modules/js-levenshtein': 2.0.1
+      '@bundled-es-modules/statuses': 1.0.1
+      '@mswjs/cookies': 1.0.0
       '@mswjs/interceptors': 0.22.12
       '@open-draft/until': 2.1.0
       '@types/cookie': 0.4.1
       '@types/js-levenshtein': 1.1.1
       '@types/statuses': 2.0.1
-      chalk: 4.1.1
       chokidar: 3.5.3
-      cookie: 0.4.2
       formdata-node: 4.4.1
       graphql: 16.6.0
       headers-polyfill: 3.1.2
@@ -8222,7 +8224,6 @@ packages:
       node-fetch: 2.6.9
       outvariant: 1.4.0
       path-to-regexp: 6.2.1
-      statuses: 2.0.1
       strict-event-emitter: 0.5.0
       type-fest: 2.19.0
       typescript: 4.9.5
@@ -8231,8 +8232,8 @@ packages:
       - encoding
     dev: true
 
-  /msw/0.0.0-fetch.rc-11_typescript@5.0.4:
-    resolution: {integrity: sha512-G9p0bpFFNX+/6g0YLZTCcmQ5X5IyEgEo7lkP/S33wjjrlzbCuf0vAJxr62jzJPfwYrepg/lTvWMfkPqPHcM1Ig==}
+  /msw/0.0.0-fetch.rc-12_typescript@5.0.4:
+    resolution: {integrity: sha512-NzXJ8gNkG+o2PWoui2wNLO8409sb6pMZmTF7yPNwEzhiiX5Di1mjekBRDNKbuwUUaZYFLfhKcqVJn4qrPgnM4Q==}
     engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true
@@ -8242,15 +8243,16 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@mswjs/cookies': 0.2.2
+      '@bundled-es-modules/cookie': 2.0.0
+      '@bundled-es-modules/js-levenshtein': 2.0.1
+      '@bundled-es-modules/statuses': 1.0.1
+      '@mswjs/cookies': 1.0.0
       '@mswjs/interceptors': 0.22.12
       '@open-draft/until': 2.1.0
       '@types/cookie': 0.4.1
       '@types/js-levenshtein': 1.1.1
       '@types/statuses': 2.0.1
-      chalk: 4.1.1
       chokidar: 3.5.3
-      cookie: 0.4.2
       formdata-node: 4.4.1
       graphql: 16.6.0
       headers-polyfill: 3.1.2
@@ -8260,7 +8262,6 @@ packages:
       node-fetch: 2.6.9
       outvariant: 1.4.0
       path-to-regexp: 6.2.1
-      statuses: 2.0.1
       strict-event-emitter: 0.5.0
       type-fest: 2.19.0
       typescript: 5.0.4
