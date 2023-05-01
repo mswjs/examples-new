@@ -43,6 +43,19 @@ jobs:
           version: 7.12.1
       - run: pnpm install --filter with-vitest
       - run: pnpm test --filter with-vitest
+  playwright:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.12.1
+      - run: pnpm install --filter with-playwright
+      - run: pnpm test --filter with-playwright
+
   karma:
     runs-on: macos-latest
     steps:
@@ -55,3 +68,4 @@ jobs:
           version: 7.12.1
       - run: pnpm install --filter with-karma
       - run: pnpm test --filter with-karma
+

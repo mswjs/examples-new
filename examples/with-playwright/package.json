@@ -10,5 +10,8 @@
     "msw": "0.0.0-fetch.rc-12",
     "playwright": "^1.33.0",
     "typescript": "^5.0.4"
+  },
+  "msw": {
+    "workerDirectory": "app"
   }
 }
