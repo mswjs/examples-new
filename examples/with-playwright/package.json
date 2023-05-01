@@ -1,7 +1,7 @@
 {
   "name": "with-playwright",
   "scripts": {
-    "dev": "web-dev-server --root-dir ./app --port 50123 --node-resolve --watch",
+    "dev": "web-dev-server --root-dir ./app --node-resolve --watch",
     "test": "playwright test"
   },
   "devDependencies": {
