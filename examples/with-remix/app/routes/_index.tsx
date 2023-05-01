@@ -43,16 +43,20 @@ export default function Index() {
 
   return (
     <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
-      <p>Hello, {serverSideData.firstName}!</p>
+      <p id="server-side-greeting">Hello, {serverSideData.firstName}!</p>
       {favoriteMovies?.data ? (
         <div>
           <h2>My favorite movies ({favoriteMovies.data.movies.length})</h2>
-          {favoriteMovies.data.movies.map((movie) => (
-            <li key={movie.id}>{movie.title}</li>
-          ))}
+          <ul id="movies-list">
+            {favoriteMovies.data.movies.map((movie) => (
+              <li key={movie.id}>{movie.title}</li>
+            ))}
+          </ul>
         </div>
       ) : null}
-      <button onClick={handleClick}>Make a runtime request</button>
+      <button id="fetch-movies-button" onClick={handleClick}>
+        Make a runtime request
+      </button>
     </div>
   )
 }

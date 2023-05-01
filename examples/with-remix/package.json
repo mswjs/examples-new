@@ -6,7 +6,8 @@
     "build": "remix build",
     "dev": "remix dev",
     "start": "remix-serve build",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "test": "playwright test"
   },
   "dependencies": {
     "@remix-run/node": "^1.15.0",
@@ -17,12 +18,14 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.33.0",
     "@remix-run/dev": "^1.15.0",
     "@remix-run/eslint-config": "^1.15.0",
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "eslint": "^8.38.0",
     "msw": "0.0.0-fetch.rc-12",
+    "playwright": "^1.33.0",
     "typescript": "^4.9.5"
   },
   "engines": {

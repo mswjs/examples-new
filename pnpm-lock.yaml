@@ -74,6 +74,7 @@ importers:
 
   examples/with-remix:
     specifiers:
+      '@playwright/test': ^1.33.0
       '@remix-run/dev': ^1.15.0
       '@remix-run/eslint-config': ^1.15.0
       '@remix-run/node': ^1.15.0
@@ -84,6 +85,7 @@ importers:
       eslint: ^8.38.0
       isbot: ^3.6.8
       msw: 0.0.0-fetch.rc-12
+      playwright: ^1.33.0
       react: ^18.2.0
       react-dom: ^18.2.0
       typescript: ^4.9.5
@@ -95,12 +97,14 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
+      '@playwright/test': 1.33.0
       '@remix-run/dev': 1.15.0_@remix-run+serve@1.15.0
       '@remix-run/eslint-config': 1.15.0_rollmblchzatnd6ayiciecrhqe
       '@types/react': 18.2.0
       '@types/react-dom': 18.2.1
       eslint: 8.39.0
       msw: 0.0.0-fetch.rc-12_typescript@4.9.5
+      playwright: 1.33.0
       typescript: 4.9.5
 
   examples/with-vitest:
