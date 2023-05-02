@@ -12,6 +12,7 @@ test('receives mocked responses on browser runtime', async ({ page }) => {
 
   const fetchMoviesButton = page.locator('#fetch-movies-button')
   await fetchMoviesButton.click()
+  await page.waitForLoadState('networkidle')
 
   const moviesList = page.locator('#movies-list')
   await moviesList.isVisible()
