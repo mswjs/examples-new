@@ -1,0 +1,1 @@
+{"ast":null,"code":"const REDUNDANT_CHARACTERS_EXP = /[\\?|#].*$/g;\nfunction getSearchParams(path) {\n  return new URL(`/${path}`, \"http://localhost\").searchParams;\n}\nfunction cleanUrl(path) {\n  return path.replace(REDUNDANT_CHARACTERS_EXP, \"\");\n}\nexport { cleanUrl, getSearchParams };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

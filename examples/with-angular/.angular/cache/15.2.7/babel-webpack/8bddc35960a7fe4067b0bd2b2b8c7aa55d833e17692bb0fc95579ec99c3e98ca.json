@@ -1,0 +1,1 @@
+{"ast":null,"code":"function passthrough() {\n  return new Response(null, {\n    status: 302,\n    statusText: \"Passthrough\",\n    headers: {\n      \"x-msw-intention\": \"passthrough\"\n    }\n  });\n}\nexport { passthrough };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

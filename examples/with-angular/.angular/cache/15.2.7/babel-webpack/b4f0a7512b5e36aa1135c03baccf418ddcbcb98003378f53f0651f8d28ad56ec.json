@@ -1,0 +1,1 @@
+{"ast":null,"code":"function getPublicUrlFromRequest(request) {\n  if (typeof location === \"undefined\") {\n    return request.url;\n  }\n  const url = new URL(request.url);\n  return url.origin === location.origin ? url.pathname : url.origin + url.pathname;\n}\nexport { getPublicUrlFromRequest };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

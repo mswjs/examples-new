@@ -1,0 +1,1 @@
+{"ast":null,"code":"// src/glossary.ts\nvar IS_PATCHED_MODULE = Symbol(\"isPatchedModule\");\nexport { IS_PATCHED_MODULE };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

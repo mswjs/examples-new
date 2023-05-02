@@ -1,0 +1,1 @@
+{"ast":null,"code":"class NetworkError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = \"NetworkError\";\n  }\n}\nexport { NetworkError };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
