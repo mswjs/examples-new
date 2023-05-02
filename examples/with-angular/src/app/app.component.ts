@@ -2,10 +2,13 @@ import { Component } from '@angular/core'
 import { Movie, User } from './models'
 import { MovieService } from './movie.service'
 import { UserService } from './user.service'
+import { NgFor, NgIf } from '@angular/common'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  standalone: true,
+  imports: [NgIf, NgFor]
 })
 export class AppComponent {
   constructor(
