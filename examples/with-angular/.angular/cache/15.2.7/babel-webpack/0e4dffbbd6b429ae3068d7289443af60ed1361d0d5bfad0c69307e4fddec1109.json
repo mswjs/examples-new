@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { worker } from '../mocks/browser';\nworker.start();\nexport const environment = {\n  production: false\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

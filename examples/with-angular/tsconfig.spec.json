@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "outDir": "./build/spec",
+    "esModuleInterop": true
+  },
+  "include": ["./src/**/*.spec.ts"]
+}

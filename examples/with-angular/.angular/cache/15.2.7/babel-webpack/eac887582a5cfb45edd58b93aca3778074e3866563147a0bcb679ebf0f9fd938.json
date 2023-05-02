@@ -1,1 +1,0 @@
-{"ast":null,"code":"function isStringEqual(actual, expected) {\n  return actual.toLowerCase() === expected.toLowerCase();\n}\nexport { isStringEqual };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

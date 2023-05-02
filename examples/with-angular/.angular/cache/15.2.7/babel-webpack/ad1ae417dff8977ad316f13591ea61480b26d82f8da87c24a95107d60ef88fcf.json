@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { setupWorker } from 'msw/browser';\nexport const worker = setupWorker();","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

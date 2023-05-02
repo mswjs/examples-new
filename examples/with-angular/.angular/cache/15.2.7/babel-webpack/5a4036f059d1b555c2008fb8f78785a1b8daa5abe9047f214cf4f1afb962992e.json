@@ -1,1 +1,0 @@
-{"ast":null,"code":"function getTimestamp() {\n  const now = /* @__PURE__ */new Date();\n  return [now.getHours(), now.getMinutes(), now.getSeconds()].map(String).map(chunk => chunk.slice(0, 2)).map(chunk => chunk.padStart(2, \"0\")).join(\":\");\n}\nexport { getTimestamp };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

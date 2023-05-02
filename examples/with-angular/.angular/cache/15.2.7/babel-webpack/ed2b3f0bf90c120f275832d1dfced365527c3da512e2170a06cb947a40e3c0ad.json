@@ -1,1 +1,0 @@
-{"ast":null,"code":"function toReadonlyArray(source) {\n  const clone = [...source];\n  Object.freeze(clone);\n  return clone;\n}\nexport { toReadonlyArray };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

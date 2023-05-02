@@ -1,1 +1,0 @@
-{"ast":null,"code":"function isIterable(fn) {\n  if (!fn) {\n    return false;\n  }\n  return typeof fn[Symbol.iterator] == \"function\";\n}\nexport { isIterable };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

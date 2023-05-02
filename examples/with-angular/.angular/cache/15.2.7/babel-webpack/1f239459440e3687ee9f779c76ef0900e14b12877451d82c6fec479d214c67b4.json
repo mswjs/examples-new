@@ -1,1 +1,0 @@
-{"ast":null,"code":"function jsonParse(value) {\n  try {\n    return JSON.parse(value);\n  } catch (error) {\n    return void 0;\n  }\n}\nexport { jsonParse };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
