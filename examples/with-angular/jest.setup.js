@@ -1,5 +1,4 @@
-import '@angular/platform-browser-dynamic'
-import 'jest-preset-angular'
+import 'jest-preset-angular/setup-jest';
 import '@testing-library/jest-dom'
 import { server } from './src/mocks/node'
 

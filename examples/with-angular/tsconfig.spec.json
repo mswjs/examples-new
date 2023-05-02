@@ -3,7 +3,9 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "outDir": "./build/spec",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "module": "CommonJs",
+    "types": ["jest"]
   },
-  "include": ["./src/**/*.spec.ts"]
+  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
 }

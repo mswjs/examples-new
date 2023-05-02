@@ -1,13 +1,23 @@
-import { enableProdMode } from '@angular/core'
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
+import { bootstrapApplication } from '@angular/platform-browser'
+import { isDevMode } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http'
 
-import { AppModule } from './app/app.module'
-import { environment } from './environments/environment'
+import { AppComponent } from './app/app.component'
 
-if (environment.production) {
-  enableProdMode()
+if(isDevMode()) {
+  import('./mocks/browser').then(m => {
+    m.worker.start().then(() => {
+      bootstrap();
+    })
+  });
+} else {
+  bootstrap();
 }
 
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .catch((err) => console.error(err))
+function bootstrap() {
+  bootstrapApplication(AppComponent, {
+    providers: [
+      provideHttpClient()
+    ]
+  });
+}
