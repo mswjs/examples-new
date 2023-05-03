@@ -4,10 +4,10 @@ A collection of usage examples of [Mock Service Worker](https://github.com/mswjs
 
 ## JavaScript frameworks
 
-- [Angular](./examples/with-angular)
+- [Angular](./examples/with-angular) (Jest, Cypress)
 - Next.js
 - React Native
-- [Remix](./examples/with-remix)
+- [Remix](./examples/with-remix) (Playwright)
 - SolidJS
 - Svelte
 - Vue
