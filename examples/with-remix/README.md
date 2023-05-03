@@ -1,5 +1,11 @@
 # Remix + MSW
 
+# Playwright + MSW
+
+[Mock Service Worker](https://github.com/mswjs/msw) usage example with [Remix](https://github.com/remix-run/remix).
+
+[![Edit in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/mswjs/examples-new/tree/main/examples/with-remix)
+
 ## General
 
 ### Create `./mocks` under `./app`
