@@ -4,7 +4,7 @@ A collection of usage examples of [Mock Service Worker](https://github.com/mswjs
 
 ## JavaScript frameworks
 
-- Angular
+- [Angular](./examples/with-angular)
 - Next.js
 - React Native
 - [Remix](./examples/with-remix)
