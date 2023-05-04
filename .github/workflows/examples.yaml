@@ -18,7 +18,12 @@ jobs:
         with:
           version: 7.12.1
       - run: pnpm install --filter with-angular
-      - run: pnpm test --filter with-angular
+      - name: Integration tests
+        run: pnpm test:integration
+        working-directory: ./examples/with-angular
+      - name: E2E tests
+        run: pnpm test:e2e
+        working-directory: ./examples/with-angular
 
   remix:
     runs-on: macos-latest
@@ -31,7 +36,27 @@ jobs:
         with:
           version: 7.12.1
       - run: pnpm install --filter with-remix
-      - run: pnpm test --filter with-remix
+      - name: E2E tests
+        run: pnpm test:e2e
+        working-directory: ./examples/with-remix
+
+  vue:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.12.1
+      - run: pnpm install --filter with-vue
+      - name: Integration tests
+        run: pnpm test:integration
+        working-directory: ./examples/with-vue
+      - name: E2E tests
+        run: pnpm test:e2e
+        working-directory: ./examples/with-vue
 
   jest:
     runs-on: macos-latest
