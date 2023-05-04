@@ -9,7 +9,7 @@ A collection of usage examples of [Mock Service Worker](https://github.com/mswjs
 - React Native
 - [Remix](./examples/with-remix) (Playwright)
 - SolidJS
-- Svelte
+- [Svelte](./examples/with-svelte/) (Vitest, Playwright)
 - [Vue](./examples/with-vue) (Vitest, Cypress)
 
 ## Test frameworks
