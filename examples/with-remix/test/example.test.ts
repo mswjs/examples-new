@@ -15,7 +15,7 @@ test('receives mocked responses on browser runtime', async ({ page }) => {
   await page.waitForLoadState('networkidle')
 
   const moviesList = page.locator('#movies-list')
-  await moviesList.isVisible()
+  await moviesList.waitFor()
   const movieItems = await moviesList.locator('li').allTextContents()
 
   expect(movieItems).toEqual([
