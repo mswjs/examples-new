@@ -10,7 +10,7 @@ A collection of usage examples of [Mock Service Worker](https://github.com/mswjs
 - [Remix](./examples/with-remix) (Playwright)
 - SolidJS
 - Svelte
-- Vue
+- [Vue](./examples/with-vue)
 
 ## Test frameworks
 
