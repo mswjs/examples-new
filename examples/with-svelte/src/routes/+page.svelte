@@ -30,7 +30,7 @@
 
 <div>
   {#if movies}
-    <ul>
+    <ul id="movies">
       {#each movies as movie}
         <li>{movie.title}</li>
       {/each}
