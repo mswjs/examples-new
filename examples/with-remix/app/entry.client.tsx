@@ -7,14 +7,11 @@
 import { RemixBrowser } from '@remix-run/react'
 import { startTransition, StrictMode } from 'react'
 import { hydrateRoot } from 'react-dom/client'
-// import { enableApiMocking } from './mocks/browser'
 
 async function prepareApp() {
   if (process.env.NODE_ENV === 'development') {
     const { worker } = await import('./mocks/browser')
     return worker.start()
-
-    // return enableApiMocking(handlers)
   }
 
   return Promise.resolve()

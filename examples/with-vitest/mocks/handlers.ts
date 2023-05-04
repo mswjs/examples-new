@@ -7,13 +7,20 @@ export const handlers = [
       lastName: 'Maverick',
     })
   }),
-  graphql.query('GetUser', () => {
+  graphql.query('ListMovies', () => {
     return HttpResponse.json({
       data: {
-        user: {
-          firstName: 'John',
-          lastName: 'Maverick',
-        },
+        movies: [
+          {
+            title: 'The Lord of The Rings',
+          },
+          {
+            title: 'The Matrix',
+          },
+          {
+            title: 'Star Wars: The Empire Strikes Back',
+          },
+        ],
       },
     })
   }),

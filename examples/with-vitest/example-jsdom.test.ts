@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-it('receives a mocked response to a REST API request', async () => {
+it('fetches the user info', async () => {
   const response = await fetch('https://api.example.com/user')
 
   expect(response.status).toBe(200)
@@ -13,7 +13,7 @@ it('receives a mocked response to a REST API request', async () => {
   })
 })
 
-it('receives a mocked response to a GraphQL API request', async () => {
+it('fetches the list of movies', async () => {
   const response = await fetch('https://api.example.com/graphql', {
     method: 'POST',
     headers: {
@@ -21,10 +21,9 @@ it('receives a mocked response to a GraphQL API request', async () => {
     },
     body: JSON.stringify({
       query: `
-        query GetUser {
-          user {
-            firstName
-            lastName
+        query ListMovies {
+          movies {
+            title
           }
         }
       `,
@@ -35,10 +34,17 @@ it('receives a mocked response to a GraphQL API request', async () => {
   expect(response.statusText).toBe('OK')
   expect(await response.json()).toEqual({
     data: {
-      user: {
-        firstName: 'John',
-        lastName: 'Maverick',
-      },
+      movies: [
+        {
+          title: 'The Lord of The Rings',
+        },
+        {
+          title: 'The Matrix',
+        },
+        {
+          title: 'Star Wars: The Empire Strikes Back',
+        },
+      ],
     },
   })
 })

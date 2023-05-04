@@ -7,7 +7,8 @@
     "dev": "remix dev",
     "start": "remix-serve build",
     "typecheck": "tsc",
-    "test": "playwright test"
+    "test": "pnpm test:e2e",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@remix-run/node": "^1.15.0",

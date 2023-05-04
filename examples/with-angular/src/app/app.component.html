@@ -1,7 +1,7 @@
 <div>
   <p id="greeting" *ngIf="user$">Hello, {{ user$.firstName }}!</p>
   <div>
-    <ul id="movieList" *ngIf="movies$.length > 0">
+    <ul id="movies" *ngIf="movies$.length > 0">
       <li *ngFor="let movie of movies$">
         <p>{{ movie.title }}</p>
       </li>
