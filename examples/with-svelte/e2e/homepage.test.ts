@@ -8,7 +8,7 @@ test('renders the user greeting', async ({ page }) => {
 });
 
 test('renders the list of movies', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/', { waitUntil: 'networkidle' });
   await page.getByText('Fetch movies').click();
 
   const moviesList = page.locator('#movies');
