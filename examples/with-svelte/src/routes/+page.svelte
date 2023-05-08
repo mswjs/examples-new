@@ -1,8 +1,7 @@
-<script>
-  /** @type {import('./$types').PageData} */
+<script lang="ts">
   export let data;
 
-  let movies;
+  let movies: Array<{ title: string; id: string }>;
 
   function handleFetchMovies() {
     fetch('/graphql', {
