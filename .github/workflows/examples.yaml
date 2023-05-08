@@ -51,9 +51,6 @@ jobs:
         with:
           version: 7.12.1
       - run: pnpm install --filter with-svelte
-      - name: Install Playwright Browsers
-        run: pnpm playwright install --with-deps
-        working-directory: ./examples/with-svelte
       - name: Unit tests
         run: pnpm test:unit
         working-directory: ./examples/with-svelte
