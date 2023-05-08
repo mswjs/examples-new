@@ -2,7 +2,7 @@
 
 A collection of usage examples of [Mock Service Worker](https://github.com/mswjs/msw).
 
-## JavaScript frameworks
+### JavaScript frameworks
 
 - [Angular](./examples/with-angular) (Jest, Cypress)
 - Next.js
@@ -12,7 +12,7 @@ A collection of usage examples of [Mock Service Worker](https://github.com/mswjs
 - [Svelte](./examples/with-svelte/) (Vitest, Playwright)
 - [Vue](./examples/with-vue) (Vitest, Cypress)
 
-## Test frameworks
+### Test frameworks
 
 - Cypress
 - [Jest](./examples/with-jest)
@@ -20,6 +20,6 @@ A collection of usage examples of [Mock Service Worker](https://github.com/mswjs
 - [Playwright](./examples/with-playwright)
 - [Vitest](./examples/with-vitest) / [Vitest (CommonJS)](./examples/with-vitest-cjs)
 
-## Other tools
+### Other tools
 
 - Storybook
