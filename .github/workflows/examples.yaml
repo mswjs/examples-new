@@ -1,5 +1,5 @@
 name: examples
-on: 
+on:
   push:
     branches:
       - main
@@ -51,6 +51,9 @@ jobs:
         with:
           version: 7.12.1
       - run: pnpm install --filter with-svelte
+      - name: Install Playwright Browsers
+        run: pnpm playwright install --with-deps
+        working-directory: ./examples/with-svelte
       - name: Unit tests
         run: pnpm test:unit
         working-directory: ./examples/with-svelte
@@ -140,4 +143,3 @@ jobs:
           version: 7.12.1
       - run: pnpm install --filter with-karma
       - run: pnpm test --filter with-karma
-
