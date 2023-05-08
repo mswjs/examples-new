@@ -1,23 +1,20 @@
 import { bootstrapApplication } from '@angular/platform-browser'
-import { isDevMode } from '@angular/core';
+import { isDevMode } from '@angular/core'
 import { provideHttpClient } from '@angular/common/http'
 
 import { AppComponent } from './app/app.component'
 
-if(isDevMode()) {
-  import('./mocks/browser').then(m => {
-    m.worker.start().then(() => {
-      bootstrap();
-    })
-  });
-} else {
-  bootstrap();
+async function prepareApp() {
+  if (isDevMode()) {
+    const { worker } = await import('./mocks/browser')
+    return worker.start()
+  }
+
+  return Promise.resolve()
 }
 
-function bootstrap() {
+prepareApp().then(() => {
   bootstrapApplication(AppComponent, {
-    providers: [
-      provideHttpClient()
-    ]
-  });
-}
+    providers: [provideHttpClient()],
+  })
+})
