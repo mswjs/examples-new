@@ -1,5 +1,5 @@
 name: examples
-on: 
+on:
   push:
     branches:
       - main
@@ -39,6 +39,24 @@ jobs:
       - name: E2E tests
         run: pnpm test:e2e
         working-directory: ./examples/with-remix
+
+  svelte:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.12.1
+      - run: pnpm install --filter with-svelte
+      - name: Unit tests
+        run: pnpm test:unit
+        working-directory: ./examples/with-svelte
+      - name: E2E tests
+        run: pnpm test:e2e
+        working-directory: ./examples/with-svelte
 
   vue:
     runs-on: macos-latest
@@ -122,4 +140,3 @@ jobs:
           version: 7.12.1
       - run: pnpm install --filter with-karma
       - run: pnpm test --filter with-karma
-
