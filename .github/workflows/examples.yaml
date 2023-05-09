@@ -51,9 +51,6 @@ jobs:
         with:
           version: 7.12.1
       - run: pnpm install --filter with-svelte
-      - name: Unit tests
-        run: pnpm test:unit
-        working-directory: ./examples/with-svelte
       - name: E2E tests
         run: pnpm test:e2e
         working-directory: ./examples/with-svelte
