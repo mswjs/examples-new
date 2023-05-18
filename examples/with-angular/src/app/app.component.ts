@@ -1,35 +1,30 @@
-import { Component } from '@angular/core'
+import { Component, inject } from '@angular/core'
 import { Movie, User } from './models'
 import { MovieService } from './movie.service'
 import { UserService } from './user.service'
-import { NgFor, NgIf } from '@angular/common'
+import { AsyncPipe, NgFor, NgIf } from '@angular/common'
+import { Observable, map } from 'rxjs'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: true,
-  imports: [NgIf, NgFor]
+  imports: [NgIf, NgFor, AsyncPipe],
 })
 export class AppComponent {
-  constructor(
-    private userService: UserService,
-    private movieService: MovieService,
-  ) {}
+  userService = inject(UserService)
+  movieService = inject(MovieService)
 
-  user$: User | undefined
-  movies$: Array<Movie> = []
+  user$: Observable<User>
+  movies$: Observable<Movie[]>
 
   ngOnInit() {
-    this.userService.getUser().subscribe((userData) => {
-      this.user$ = userData
-    })
+    this.user$ = this.userService.getUser()
   }
 
   onFetchMoviesClick() {
-    this.movieService.listMovies().subscribe((response) => {
-      if (response.data) {
-        this.movies$ = response.data.movies
-      }
-    })
+    this.movies$ = this.movieService
+      .listMovies()
+      .pipe(map((moviesResponse) => moviesResponse.data.movies))
   }
 }
